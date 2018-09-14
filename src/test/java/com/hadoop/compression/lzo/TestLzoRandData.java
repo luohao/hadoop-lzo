@@ -29,6 +29,8 @@ public class TestLzoRandData extends TestCase {
     super.setUp();
     conf = new Configuration();
     conf.set("io.compression.codecs", LzopCodec.class.getName());
+    conf.set("io.compression.codec.lzo.compressor", "LZO1X_999");
+    conf.set("io.compression.codec.lzo.compression.level", "3");
   }
 
   @Override
